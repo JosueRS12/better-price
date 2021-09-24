@@ -1,17 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Layout from './components-commons/Layout/Layout.js' 
+
+const Header = (props) =>{
+  return(
+    <header>
+      <h1 align="center">
+        Busca, compara y encuentra los mejores precios que se ajusten a tu bolsillo.
+      </h1>
+    </header>
+  );
+}
+
+const Categoria = (props) =>{
+  return(
+    <section id="categorias">
+      categorias
+    </section>
+  );
+}
+
+
+const Marca = (props) =>{
+  return(
+    <section id="Marca">
+      Marcas
+    </section>
+  );
+}
+
+
+
+const Home = (props)=>{
+  return(
+    <Layout>
+      <Header/>
+      <Categoria/>
+      <Marca/>
+    </Layout>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

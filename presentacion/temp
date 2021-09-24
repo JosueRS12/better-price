@@ -1,0 +1,32 @@
+C = CREATE,
+M = MADE,
+F = FINISHED
+
+componentes{
+  Registro C,
+  Ingresar C,
+  CardProduct C,
+  LayoutPage C{ => root
+    Nav CM,
+    Footer CM,
+    {
+      Header,
+      Categorias,
+      Proveedor
+    }
+  },
+  ProductosPageC{
+    <LayoutPage>
+      <CardProduct/>
+    </LayoutPage>
+  },
+  FavoritosPageC{
+    <CardProduct/>
+  } 
+
+}
+
+
+pending{
+  Layout, manejar events para el login y no login...
+}
