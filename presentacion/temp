@@ -29,4 +29,8 @@ componentes{
 
 pending{
   Layout, manejar events para el login y no login...
+  - poner las redes de ellas.
+  - linkear páginas.
+  - linkear categorías.
+  - arreglar categorías.
 }

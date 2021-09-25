@@ -90,7 +90,7 @@ const Subject = (props) => {
           <div className="Container-redes">
             {sub.redes.map((red,i)=>
               <div className='container-icon' key={i}>
-                <a target="_blank" href={red.url} rel="noreferrer">
+                <a className="decorate-a" target="_blank" href={red.url} rel="noreferrer">
                   <img src={red.nombre} alt="icono de linkedin" className="size-icon"/>
                 </a>
               </div>
