@@ -1,21 +1,22 @@
 C = CREATE,
 M = MADE,
 F = FINISHED
+D = *DATA;
 
 componentes{
   Registro C,
   Ingresar C,
-  CardProduct C,
-  LayoutPage C{ => root
+  CardProduct CMF(D),
+  LayoutPage CMF{ => root
     Nav CM,
-    Footer CM,
+    Footer CMF,
     {
-      Header,
-      Categorias,
-      Proveedor
+      HeaderCMF,
+      CategoriasCMF(D),
+      ProveedorCMF
     }
   },
-  ProductosPageC{
+  ProductosPageCMF(D){
     <LayoutPage>
       <CardProduct/>
     </LayoutPage>
@@ -26,11 +27,10 @@ componentes{
 
 }
 
-
 pending{
   Layout, manejar events para el login y no login...
   - poner las redes de ellas.
   - linkear páginas.
-  - linkear categorías.
-  - arreglar categorías.
+  - exito no va
+  - Poner la data
 }

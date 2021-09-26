@@ -24,18 +24,23 @@ h1{
 
 .container-articles{
   margin-inline: 10%;
-  height: auto;
+  /*height: auto;*/
   display: grid;
   gap: 3rem; /*"espacio" entre hijos*/ 
-  grid-auto-rows: 5rem; /*"espacio" entre las filas de los hijos al resize*/
+  grid-auto-rows: 10rem; /*"espacio" entre las filas de los hijos al resize*/
   grid-template-columns: repeat(auto-fit, minmax(7rem,2fr));
 }
 .decorate-article{
   border-radius: 10px;
   height: max-content;
   position:relative;
-  padding: 2.4vw;
   background-color: RGBA(247,201,15,0.86);
+}
+.decorate-link{
+  padding: 2.4vw;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .icon-categorias{

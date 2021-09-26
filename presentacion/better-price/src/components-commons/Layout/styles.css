@@ -28,10 +28,6 @@ footer{
   grid-template-columns: repeat(auto-fit, minmax(7rem,2fr));
 }
 
-/*.container-subject{ [>dad<]*/
-
-/*}*/
-
 .container-icon{ /*dad*/
   display: inline-grid;
 }

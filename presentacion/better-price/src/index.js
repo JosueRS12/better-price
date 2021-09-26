@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import Layout from './components-commons/Layout/Layout.js' 
+import RoutingApp from './routing.js';
+import {Link} from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import {Carousel} from 'react-bootstrap';
 
@@ -48,11 +52,12 @@ const Categoria = (props) =>{
     {
       categorias.map((e,i) =>
       <article key={i} className="decorate-article">
-        <a href={e.url}>
+      <Link to="/productos"> 
+        <a href={e.url} className="decorate-link">
           <img src={e.img} alt={e.nombre} className="icon-categorias"/> 
         </a>
+      </Link> 
       </article>
-      
     )}
       </div>
     </section>
@@ -104,9 +109,11 @@ const Home = (props)=>{
   );
 }
 
+export default Home;
+
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <RoutingApp/>
   </React.StrictMode>,
   document.getElementById('root')
 );
