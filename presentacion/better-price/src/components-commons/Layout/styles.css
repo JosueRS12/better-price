@@ -1,0 +1,50 @@
+.decorate-nav{
+  position: fixed;
+  width: 100%;
+  z-index:100;
+  background-color: #4E6B85;
+}
+
+body{
+  min-height: 100%;
+  color: black;
+  font-family: 'Zilla Slab', serif;
+}
+
+footer{
+  margin-top: 3rem;
+  padding-inline: 30%;
+  padding-block: 1rem;
+  bottom: 0;
+  width: 100%;
+  background-color: #4E6B85;
+  font-family: 'Merriweather', serif;
+}
+
+.container-names{ /*grandpa*/
+  display: grid;
+  gap: 1rem; /*"espacio" entre hijos*/ 
+  grid-auto-rows: 5rem; /*"espacio" entre las filas de los hijos al resize*/
+  grid-template-columns: repeat(auto-fit, minmax(7rem,2fr));
+}
+
+.container-icon{ /*dad*/
+  display: inline-grid;
+}
+
+.container-redes{ /*dad*/
+  display: grid;
+  gap: 3rem; /*"espacio" entre hijos*/ 
+  grid-auto-rows: 6rem; /*"espacio" entre las filas de los hijos al resize*/
+  grid-template-columns: repeat(auto-fit, minmax(4rem,2fr));
+}
+
+.size-icon{
+  max-height: 2rem;
+}
+
+.decorate-a:hover{
+  background-color: rgba(39,96,162,0.5);
+  /*blackground-*/
+}
+

@@ -1,0 +1,47 @@
+.card-container{
+  margin-inline: 3rem;
+  font-family: 'Bree Serif', serif;
+  display: grid;
+  justify-items: center;
+  border-radius: 20px;
+  position:relative;
+  background-color: RGBA(247,201,15,0.5);
+  height: fit-content;
+  width: fit-content;
+  padding: 1.4rem;
+}
+
+.size-img{
+  /*padding-inline: 20px;*/
+  height: 12rem;
+  margin-bottom: 10px;
+
+}
+
+.headers-container{
+  width: 13rem;
+}
+
+.headers-container p{
+  padding-inline-start: 2vh;
+}
+
+.headers-container p{
+  border-radius: 10px;
+  background-color: RGBA(247,201,15,0.86);
+}
+
+.decorate-button{
+  border: none;
+  background-color: RGBA(247,201,15,0);
+}
+
+.decorate-button:hover{
+  
+}
+
+.size-fav{
+  opacity: 0.8;
+  height:2rem;
+  width: 2rem;
+}

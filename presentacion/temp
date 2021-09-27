@@ -1,0 +1,37 @@
+C = CREATE,
+M = MADE,
+F = FINISHED
+D = *DATA;
+
+componentes{
+  Registro C,
+  Ingresar C,
+  CardProduct CM(D),
+  LayoutPage CMF{ => root
+    Nav CM,
+    Footer CMF,
+    {
+      HeaderCMF,
+      CategoriasCMF(D),
+      ProveedorCMF
+    }
+  },
+  ProductosPageCMF(D){
+    <LayoutPage>
+      <CardProduct/>
+    </LayoutPage>
+  },
+  FavoritosPageC{
+    <CardProduct/>
+  } 
+
+}
+
+pending{
+  Layout, manejar events para el login y no login...
+  - poner las redes de ellas.
+  - linkear páginas.
+  - exito no va es tecnoplaza.
+  - Poner la data
+  - crear rutas por categoría
+}
