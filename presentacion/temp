@@ -6,17 +6,17 @@ D = *DATA;
 componentes{
   Registro C,
   Ingresar C,
-  CardProduct CM(D),
+  CardProduct CMFD,
   LayoutPage CMF{ => root
     Nav CM,
     Footer CMF,
     {
       HeaderCMF,
-      CategoriasCMF(D),
+      CategoriasCMFD,
       ProveedorCMF
     }
   },
-  ProductosPageCMF(D){
+  ProductosPageCMFD{
     <LayoutPage>
       <CardProduct/>
     </LayoutPage>
@@ -30,8 +30,7 @@ componentes{
 pending{
   Layout, manejar events para el login y no login...
   - poner las redes de ellas.
-  - linkear páginas.
-  - exito no va es tecnoplaza.
-  - Poner la data
-  - crear rutas por categoría
+  - registro ingreso bd
+  - fav page y todo
+  - hacer el nav a "mano"
 }

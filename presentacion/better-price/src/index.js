@@ -11,7 +11,7 @@ import {Carousel} from 'react-bootstrap';
 
 import alkosto from './assets/alkosto-slider.jpg';
 import ktronix from './assets/ktronix-slider.jpg';
-import exito from './assets/exito-slider.jpg';
+import tecnoPlaza from './assets/tecnoplaza-slider.png';
 import smartphone from './assets/smartphone.png';
 import televisor from './assets/televisor.png';
 import laptop from './assets/laptop.png';
@@ -31,17 +31,14 @@ const Categoria = (props) =>{
     {
       nombre:'Televisores',
       img:televisor,
-      url:'',
     },
     {
-      nombre:'Laptops',
+      nombre:'Portatiles',
       img:laptop,
-      url:'',
     },
     {
-      nombre:'Smarthpones',
+      nombre:'Smartphones',
       img:smartphone,
-      url:'',
     },
   ];
   //se obtiene la lista de tarjetas ya ordenas y todo
@@ -52,7 +49,7 @@ const Categoria = (props) =>{
     {
       categorias.map((e,i) =>
       <article key={i} className="decorate-article">
-      <Link to="/productos"> 
+      <Link to = {`/productos/${e.nombre}`}> 
         <a href={e.url} className="decorate-link">
           <img src={e.img} alt={e.nombre} className="icon-categorias"/> 
         </a>
@@ -72,11 +69,11 @@ const Marca = (props) =>{
       img: alkosto,
     },
     {
-      nombre:'Exito',
-      img: exito,
+      nombre:'Tecno Plaza',
+      img: tecnoPlaza,
     },
     {
-      nombre:'Tecno Plaza',
+      nombre:'ktronix',
       img: ktronix,
     }
   ];

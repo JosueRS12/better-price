@@ -17,7 +17,7 @@ def create_app(config=DevelpmentConfig):
     CORS(app)
     app.secret_key = 'm26QLWq2Bd4UIX84'
 
-    @app.route("/")
+    @app.route("/", methods = ['GET'])
     def listar():
         response_body = copy.deepcopy(RESPONSE_BODY_DEFAULT)
         status_code = HTTPStatus.OK
@@ -28,7 +28,7 @@ def create_app(config=DevelpmentConfig):
             response_body["data"].append(producto)
         return response_body, status_code
 
-    @app.route("/categoria/<cat>")
+    @app.route("/categoria/<cat>", methods = ['GET'])
     def listar_categoria(cat):
         response_body = copy.deepcopy(RESPONSE_BODY_DEFAULT)
         status_code = HTTPStatus.OK

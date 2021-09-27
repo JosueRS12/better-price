@@ -1,5 +1,5 @@
 .card-container{
-  margin-inline: 3rem;
+  margin-inline: 1rem;
   font-family: 'Bree Serif', serif;
   display: grid;
   justify-items: center;
@@ -12,21 +12,17 @@
 }
 
 .size-img{
-  /*padding-inline: 20px;*/
   height: 12rem;
   margin-bottom: 10px;
 
 }
 
 .headers-container{
-  width: 13rem;
+  width: 18rem;
 }
 
 .headers-container p{
   padding-inline-start: 2vh;
-}
-
-.headers-container p{
   border-radius: 10px;
   background-color: RGBA(247,201,15,0.86);
 }
