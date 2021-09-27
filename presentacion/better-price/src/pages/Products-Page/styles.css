@@ -1,9 +1,9 @@
 .products-container{
-  margin-inline: 3rem;
+  margin-inline: 2rem;
   position:relative;
   display: grid;
   gap: 1rem; /*"espacio" entre hijos*/ 
-  grid-auto-rows: 25rem; /*"espacio" entre las filas de los hijos al resize*/
+  grid-auto-rows: 27rem; /*"espacio" entre las filas de los hijos al resize*/
   grid-template-columns: repeat(auto-fit, minmax(20rem,2fr));
 }
 

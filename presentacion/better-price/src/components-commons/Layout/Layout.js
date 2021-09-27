@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import {Navbar, Container, Dropdown, DropdownButton} from 'react-bootstrap';
 import logotipo from '../../assets/logo-better-price.png';
@@ -14,12 +16,14 @@ const Nav = (props)=>{
     <nav className="decorate-nav">
       <Navbar expand="lg">
       <Container> 
-        <Navbar.Brand href="#home">
-          <img src={logotipo} alt='Logotipo de Better Price' Style="width:5.4em; height: 60px"/>
+        <Navbar.Brand>
+          <Link to='/'>
+            <img src={logotipo} alt='Logotipo de Better Price' Style="width:5.4em; height: 60px"/>
+          </Link>
         </Navbar.Brand> 
-          <DropdownButton as='Warning' key='Warning'variant='warning'title="Mi Cuenta">
-            <Dropdown.Item href='#'> Iniciar Sesion</Dropdown.Item>
-            <Dropdown.Item href='#'> Registrarse</Dropdown.Item>
+          <DropdownButton as='Warning' key='Warning' variant='warning'title="Mi Cuenta">
+            <Dropdown.Item href='#'> Iniciar Sesion </Dropdown.Item>
+            <Dropdown.Item href='#'> Registrarsei </Dropdown.Item>
           </DropdownButton>
       </Container>
       </Navbar>
@@ -103,8 +107,11 @@ const Subject = (props) => {
 } 
 
 const Footer = (props) =>{
+  const display = {
+    position : props.pos
+  }
   return(
-    <footer> 
+    <footer style={display}> 
       <h5 align="center">Diseñado y Desarrollado por: </h5>
       <div className="container-names">
         <Subject/>
@@ -119,7 +126,7 @@ const Layout = (props) =>{
     <>
     <Nav/>
         {props.children}
-    <Footer/>
+    <Footer pos = {props.pos}/>
     </>
   );
 }

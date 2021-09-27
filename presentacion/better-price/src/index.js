@@ -101,7 +101,7 @@ const Marca = (props) =>{
 
 const Home = (props)=>{
   return(
-    <Layout>
+    <Layout pos="relative">
       <Header/>
       <Categoria/>
       <Marca/>

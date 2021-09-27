@@ -7,6 +7,7 @@
   position:relative;
   background-color: RGBA(247,201,15,0.5);
   height: fit-content;
+  width: fit-content;
   padding: 1.4rem;
 }
 
@@ -28,4 +29,19 @@
 .headers-container p{
   border-radius: 10px;
   background-color: RGBA(247,201,15,0.86);
+}
+
+.decorate-button{
+  border: none;
+  background-color: RGBA(247,201,15,0);
+}
+
+.decorate-button:hover{
+  
+}
+
+.size-fav{
+  opacity: 0.8;
+  height:2rem;
+  width: 2rem;
 }
