@@ -7,7 +7,6 @@ const ProductPage = (props) =>{
   
 
   var categoria = props.match.params.categoria;
-  console.log(categoria);
   const [items, setItem] = useState([]);
 
   useEffect(()=>{
@@ -15,7 +14,7 @@ const ProductPage = (props) =>{
   });
 
   const fetchCategoria = async () => {
-    const data = await fetch(`http://127.0.0.1:5000/categoria/${categoria.toLocaleLowerCase()}`);
+    const data = await fetch(`http://127.0.0.1:5000/categoria/${categoria}`);
     const listItem = await data.json();
     setItem(listItem.data);
   }

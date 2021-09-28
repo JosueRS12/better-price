@@ -29,15 +29,15 @@ const Header = (props) =>{
 const Categoria = (props) =>{
   var categorias = [
     {
-      nombre:'Televisores',
+      nombre:'televisores',
       img:televisor,
     },
     {
-      nombre:'Portatiles',
+      nombre:'portatiles',
       img:laptop,
     },
     {
-      nombre:'Smartphones',
+      nombre:'smartphones',
       img:smartphone,
     },
   ];
