@@ -24,8 +24,7 @@ CREATE TABLE Categoria
 (
 	k_idCategoria varchar(26) NOT NULL,
 	n_nombreCategoria varchar(80) NOT NULL,
-	o_descripcion varchar(250) NULL,
-	i_estadoCategoria boolean NOT NULL
+  UNIQUE(k_idCategoria)
 )
 ;
 
@@ -37,7 +36,8 @@ CREATE TABLE Cliente
 	n_apellidosCliente varchar(40) NOT NULL,
 	i_sexo varchar(1) NOT NULL,
 	n_direccion varchar(50) NOT NULL,
-	o_telefonoCliente numeric NOT NULL
+	o_telefonoCliente numeric NOT NULL,
+  UNIQUE(k_identificacionCliente)
 )
 ;
 
@@ -45,7 +45,7 @@ CREATE TABLE Cliente_Producto
 (
 	k_identificacionCliente integer NOT NULL,
 	k_idProducto varchar(26) NOT NULL,
-	i_estadoFavorito boolean NULL
+	i_estadoFavorito boolean DEFAULT true NOT NULL
 )
 ;
 
@@ -55,7 +55,8 @@ CREATE TABLE Producto
 	n_nombreProducto varchar(150) NOT NULL,
 	n_nombreProveedor varchar(80) NOT NULL,
 	v_precioProducto integer NOT NULL,
-	k_idCategoria varchar(26) NOT NULL
+	k_idCategoria varchar(26) NOT NULL,
+  UNIQUE(k_idProducto)
 )
 ;
 

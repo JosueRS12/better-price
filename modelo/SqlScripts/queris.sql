@@ -16,3 +16,6 @@ SELECT * FROM cliente;
 SELECT * FROM categoria;
 SELECT * FROM producto;
 SELECT * FROM cliente_producto;
+
+-- optinals
+DELETE FROM cliente Where NOT k_identificacioncliente = 1193098162
