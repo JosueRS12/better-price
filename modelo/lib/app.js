@@ -1,7 +1,5 @@
 "use strict";
 
-var _prueba = require("./prueba.js");
-
 var _express = _interopRequireDefault(require("express"));
 
 var _client = _interopRequireDefault(require("./routes/client.js"));

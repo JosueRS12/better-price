@@ -16,7 +16,7 @@ const createFavorite = async (req, res) => {
     const favorite = new _favorite.default();
     const data = await favorite.insertFavorite(req.body.idClient, req.body.idProduct);
     res.status(201).send({
-      id: req.body.id
+      data: req.body.idClient
     });
   } catch (e) {
     res.status(500).send(e);

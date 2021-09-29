@@ -33,6 +33,28 @@ export default class Client{
       throw new error('an error happend consulting all clients');
     }
   }
+
+  async verifyClient(id, nombre){
+    let query = "SELECT * FROM cliente WHERE k_identificacioncliente = $1 AND n_nombrescliente = $2";
+    let values = [id,nombre];
+    try{
+      return await pool.query(query, values); 
+    }catch(e){
+      console.log(e);
+      throw new error('an error happend validating a existing client');
+    }
+  }
+
+  async updateLoggedClient(logged, id){
+    let query = "UPDATE cliente SET i_logged = $1 WHERE k_identificacioncliente = $2";
+    let values = [logged, id];
+    try{
+      return await pool.query(query, values); 
+    }catch(e){
+      console.log(e);
+      throw new error('an error happend validating a existing client');
+    }
+  }
 }
 
 

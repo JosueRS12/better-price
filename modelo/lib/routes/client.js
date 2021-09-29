@@ -18,4 +18,15 @@ router.route("/consult/:id").get((req, res) => {
 router.route("/create").post((req, res) => {
   (0, _clientController.createClient)(req, res);
 });
+router.route("/login/token").post((req, res) => {
+  (0, _clientController.tokenLoginClient)(req, res);
+});
+router.route("/login/status").get(_clientController.authToken, (req, res) => {
+  res.json({
+    status: "true"
+  });
+});
+router.route("/logout").put((req, res) => {
+  (0, _clientController.logoutClient)(req, res);
+});
 module.exports = router;

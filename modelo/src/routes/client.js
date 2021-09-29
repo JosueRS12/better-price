@@ -1,5 +1,5 @@
 import express from 'express';
-import {createClient, obtainClientById, obtainClients} from '../controllers/clientController.js';
+import {logoutClient, createClient, obtainClientById, obtainClients, tokenLoginClient, authToken} from '../controllers/clientController.js';
 
 const router = express.Router();
 
@@ -16,5 +16,19 @@ router
 router
   .route( "/create")
   .post((req,res) =>{createClient(req,res)});
+
+router
+  .route("/login/token")
+  .post((req,res) =>{tokenLoginClient(req,res)});
+
+router
+  .route("/login/status")
+  .get(authToken, (req,res)=>{
+    res.json({status: "true"})
+  })
+
+router
+  .route("/logout")
+  .put((req,res)=>{logoutClient(req,res)})
 
 module.exports = router;
