@@ -15,7 +15,7 @@ const RoutingApp = () =>{
         <Switch>
           <Route path='/' exact component={Home}/>
           <Route path='/productos/:categoria' component={ProductPage}/>
-          <Route path='/misfavoritos/:categoria' component={FavPage}/>
+          <Route path='/misfavoritos/:categoria' exact component={FavPage}/>
         </Switch>
       </Router>
     </>

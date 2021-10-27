@@ -3,9 +3,7 @@ import './styles.css';
 import Layout from '../../components-commons/Layout/Layout.js';
 import CardProduct from '../../components-commons/Card-Product/CardProduct.js';
 
-const FavPage = (props) =>{
-  
-
+const FavPage = (props) => {
   const [items, setItem] = useState([]);
 
   useEffect(()=>{

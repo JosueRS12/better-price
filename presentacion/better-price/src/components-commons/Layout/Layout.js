@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
 import 'bootstrap/dist/css/bootstrap.css';
 import {Navbar, Container, Dropdown, DropdownButton} from 'react-bootstrap';
 import logotipo from '../../assets/logo-better-price.png';
@@ -12,18 +11,26 @@ import './styles.css'
 //revisar estado en mi cuenta
 
 const Nav = (props)=>{
+  let cat = 'televisor';
   return (
     <nav className="decorate-nav">
       <Navbar expand="lg">
       <Container> 
         <Navbar.Brand>
-          <Link to='/'>
+          <Link to = {`/`}> 
             <img src={logotipo} alt='Logotipo de Better Price' Style="width:5.4em; height: 60px"/>
           </Link>
         </Navbar.Brand> 
           <DropdownButton as='Warning' key='Warning' variant='warning'title="Mi Cuenta">
-            <Dropdown.Item href='#'> Iniciar Sesion </Dropdown.Item>
-            <Dropdown.Item href='#'> Registrarsei </Dropdown.Item>
+            <Dropdown.Item href='#'> 
+              <Link to = {`/misfavoritos/${cat}`}> 
+                Mis favoritos 
+              </Link>
+            </Dropdown.Item>
+            {
+              //<Dropdown.Item href='#'> Iniciar Sesion </Dropdown.Item>
+              //<Dropdown.Item href='#'> Registrarsei </Dropdown.Item>
+            }
           </DropdownButton>
       </Container>
       </Navbar>
